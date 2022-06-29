@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;900&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/backgroundImg.png');
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.formContainer {
+    height: fit-content;
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 55rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+fieldset {
+    padding: 0;
+}
+label {
+    display: none;
+}
+fieldset {
+    border:none;
+}
+input[type='submit'] {
+    color: white;
+    font-weight: 600;
+    background-color: #17598C;
+    border:none;
+    border-radius: .8rem;
+    padding: .25rem;
+}
+input[type='submit']:hover {
+    background-color: #2f6996; 
+    cursor: pointer;
+}
+legend {
+    margin-bottom: 3rem;
+    font-family: inherit; 
+    font-size: 2rem;
+    font-weight: 900;
+}
+label {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-weight: 600;
+}
+input {
+    padding-left: .5rem;
+    outline: none;
+    width: 20rem;
+    font-size: 1.5rem;
+    border:none;
+    border-radius: .35rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+.inputRow {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+::placeholder {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #AFAFAF;
+    letter-spacing: .2rem;
+    font-weight: 300;
+}
+::-webkit-input-placeholder {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #AFAFAF;
+    letter-spacing: .2rem;
+    font-weight: 300;
+}
+::-ms-input-placeholder {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #AFAFAF;
+    letter-spacing: .2rem;
+    font-weight: 300;
+}
+.errorMessage {
+    font-size: 1.2rem;
+}
+.errorIcon {
+    display: flex;
+}
+#passwordErrors {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#passwordErrors > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
