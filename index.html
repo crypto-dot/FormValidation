@@ -24,7 +24,8 @@
                 <div class="inputRow"><input minlength="5" maxlength="5" pattern="[0-9]+" placeholder = 'Zipcode (US)' name= 'zipcode' id='zipcode' type="text"><span class='errorIcon' id= 'zipcodeErrorIcon'> </span><span class = 'errorMessage' id = 'zipcodeError'></span></div></div>
             <div id ='passwordContainer'class="passwordContainer" >
                 <label for="password">password</label>
-                <div class = 'inputRow'><input pattern = '\S*[A-Z]+[0-9]+(\W|_)+\S*' minlength = '12' placeholder="Password" name = 'password' id= 'password' type="password"> <span id ='passwordErrors'>
+                <div class = 'inputRow'>
+                    <div id='submitContainer'> <input pattern = '.*(?=.*?([A-Z]))(?=.*?([0-9]))(?=.*?(\W|_)).*' minlength = '12' placeholder="Password" name = 'password' id= 'password' type="password"> <input type='submit' value="Sign Up"> </div> <span id ='passwordErrors'>
                    <div> <span class='errorIcon' id='charLengthErrorIcon'></span> <div class='errorMessage' id = 'invalidCharLength'></div> </div>
                   <div><span class='errorIcon' id='specialCharErrorIcon'></span> <div class='errorMessage' id='invalidSpecialCharLength'></div> </div>
                     <div><span class='errorIcon' id='invalidUpperCharErrorIcon'></span><div class='errorMessage' id='invalidUpperCharLength'></div></div>
@@ -32,7 +33,7 @@
                 </span></div>
 
             </div>
-            <input type='submit' value="Sign Up">
+    
             </fieldset>
         </form>
     </div>
