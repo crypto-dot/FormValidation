@@ -3,12 +3,17 @@
     const zipcodeInput = document.getElementById('zipcode');
     const countryInput = document.getElementById('country');
     const passwordInput = document.getElementById('password');
+    const form = document.querySelector('form');
 
     emailInput.addEventListener('input', validateEmail.bind(emailInput));
     countryInput.addEventListener('input', validateCountry.bind(countryInput));
     zipcodeInput.addEventListener('input', validateZipcode.bind(zipcodeInput));
     passwordInput.addEventListener('input', validatePassword.bind(passwordInput));
-
+    form.addEventListener('submit', (e) => {
+        if(!emailInput.validity.valid || !zipcodeInput.validity.valid || !countryInput.validity.valid || !passwordInput.validity.valid) {
+            e.preventDefault();
+        }
+    })
 })();
 function validateEmail() {
     const emailError = document.getElementById('emailError');
@@ -91,6 +96,9 @@ function validatePassword() {
         invalidCharLength.textContent = 'Password is the right length!';
         invalidCharLength.style.color = '#4AE941'; 
     } 
+    if((/\d/).test(password) && (/[A-Z]/).test(password) && (/(\W|_)/).test(password) && !(this.validity.tooShort || this.value === '') ){
+        this.setCustomValidity('');
+    }
 }
 function emailErrorMessage() {
     const emailError = document.getElementById('emailError');
