@@ -75,7 +75,7 @@ function validatePassword() {
       invalidUpperCharLength.style.color = '#FF1616';
     } else {
       placeCheckMarkInlineSVG('invalidUpperCharErrorIcon');
-      invalidCharLength.textContent = 'You have 1 uppercase letter!'
+      invalidUpperCharLength.textContent = 'You have 1 uppercase letter!'
       invalidUpperCharLength.style.color = '#4AE941';
     }
     if(!(/(\W|_)/).test(password)) {
